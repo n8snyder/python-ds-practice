@@ -1,4 +1,4 @@
-def calculate(operation, a, b, make_int=False, message='The result is'):
+def calculate(operation, a, b, make_int=False, message="The result is"):
     """Perform operation on a + b, ()possibly truncating) & returning w/msg.
 
     - operation: 'add', 'subtract', 'multiply', or 'divide'
@@ -31,3 +31,16 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
 
     if operation not in ["add", "subtract", "multiply", "divide"]:
         raise ValueError("Invalid Operation")
+
+    result = None
+    if operation == "add":
+        result = a + b
+    elif operation == "subtract":
+        result = a - b
+    elif operation == "multiply":
+        result = a * b
+    elif operation == "divide":
+        result = a / b
+
+    result = int(result) if make_int else result
+    return f"{message} {result}"
