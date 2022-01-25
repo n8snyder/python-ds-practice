@@ -29,3 +29,7 @@ def is_palindrome(phrase):
             return False
         i -= 1   
     return True
+
+    # enumerate 
+
+    # for i, fruit in enumerate(fruits)

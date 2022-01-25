@@ -9,4 +9,5 @@ def reverse_string(phrase):
     """
     phrase_list = list(phrase)
     phrase_list.reverse()
-    return "".join(phrase_list)
+    # return "".join(phrase_list)
+    return phrase[::-1]
